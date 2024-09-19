@@ -1,0 +1,70 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'details.css' %}">
+{% block content %}
+<div class="navigation">
+<img src="{% static 'Untitled.jpeg' %}">
+  <h1>Guyva Golf Club</h1>
+      <nav>
+        <ul>
+          <li><a href="/group_one">Members</a></li>
+          <li><a href="/">Home</a></li>
+        </ul>
+          
+    </div>
+   
+  <style>
+    body {
+      background-color:none;
+      font-family: verdana;
+      background-image: url('static/swing.jpeg');
+    }
+    .navigation{
+      background-color:green ;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }  
+  h3{
+    color:blue;
+  }
+  img{
+    width:200px;
+    height:100px;
+  }
+  .detailed{
+    align-items: center;
+    display:flexbox;
+  }
+  footer{
+    margin-top:12%;
+    background-color:green;
+    padding-bottom:none;
+    padding-top:20px;
+  }
+  </style>
+
+  <!--details-->
+  <div class="detailed">
+<h3>Name: {{ mymember.firstname }} {{ mymember.lastname }}</h3>
+<p>Role: {{ mymember.role }}</p>
+<p> Member's Id: {{ mymember.Id }}</p>
+<p> Date Joined: {{ mymember.joined_date }}</p>
+
+<img style="width:500px;height:250px;" src="{% static 'swing.jpeg' %}">
+</div>
+<footer>
+  <p>Reach out to us through:<br>
+  <b>contacts:</b></p>
+  Email:<a href="#">guyvagolf@gmail.co.ke</a>
+  Twitter:<a href="#">@guyvagolfclub</a><br>
+  Instagram:<a href="#">guyva_Golf_Club</a><br>
+  Facebook:<a href="#">guyva_golfclub</a>
+ </footer>
+{% endblock %}

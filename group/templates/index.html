@@ -1,0 +1,70 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+  My Tennis Club - List of all members
+{% endblock %}
+
+
+{% block content %}
+<div class="navigation">
+  <img  src="{% static 'Untitled.jpeg' %}">
+  <h1>Guyva Golf Club</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          {% for x in group_members %}
+            <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+          {% endfor %}
+        </ul>  </nav>
+    </div>
+     <style>
+    body {
+      background-color:none;
+      font-family: verdana;
+    }
+    .navigation{
+      background-color:green;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }  
+  img{
+    width:300px;
+    height:150px;
+  }
+  .images{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: black;
+    
+  }
+  footer{
+    margin-top:9%;
+    background-color:green;
+    padding-bottom:none;
+    padding-top:20px;
+  }
+  </style>
+
+<h2>Welcome to our Member's page</h2>
+<h3>We are glad to have you</h3>
+<p>Before we begin,<br>
+  Welcome to the Guyva Golf Club!
+  It's a pleasure to have you all here for our members presentation.A club cannot be a club without united members.<br> 
+That is why Guyva Golf Club has a vision to make Golf an enjoyable game in Kenya. </p>
+<p> Each member has a designated role to play to drive this club beyond it's limits. Please visit the <b>navigation bar</b> to check out our members and their details.</p>
+<div class="images">
+  <img style="width:500px;height:200px;" src="{% static 'timing.jpeg' %}">
+  <p style="color:white;width:200px;width:fit-content;">Just like a ball and a stick.<br> Without the stick you can't play golf and without the ball you cannot still play Golf. <br>That is how the unit of our members is. Far and beyond, in good and bad times, <br>we work togethe to achieve the best.</p>
+  <img style="width:500px;height:200px;" src="{% static 'sticks.jpeg' %}">
+</div>
+  <footer>
+    <p>Reach out to us through:<br>
+    <b>contacts:</b></p>
+    Email:<a href="#">guyvagolf@gmail.co.ke</a>
+    Twitter:<a href="#">@guyvagolfclub</a><br>
+    Instagram:<a href="#">guyva_Golf_Club</a><br>
+    Facebook:<a href="#">guyva_golfclub</a>
+   </footer>
+{% endblock %}

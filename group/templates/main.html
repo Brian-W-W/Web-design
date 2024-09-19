@@ -1,0 +1,78 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}
+
+My Tennis Club
+{% endblock %}
+
+
+{% block content %}
+
+<div class="navigation">
+<img  src="{% static 'Untitled.jpeg' %}">
+  <h1 style="padding-right:15%;">Guyva Golf Club</h1>
+      <nav>
+        
+          <li style="font-weight:200;font-family:'Times New Roman', Times, serif;font-size:medium;"><a href="/group_one">Members</a></li>
+          <li><a href="/">Home</a></li>
+                </nav>
+    </div>
+   
+    <div class="details">
+      <h2>Welcome to Guyva Golf Club</h2></h1>
+      <p>Have fun and enjoy! Guyva golf club welcomes you to play with us</p>
+      <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> We are dedicated to make our club the best in the market by working together<br>
+        In this site, we will just introduce our members and give out their details.
+
+      </p>
+
+    </div>
+      <img style="padding-left:30%;align-items:center;width:700px;height:350px;" src="{% static 'nature.jpeg' %}">
+    <p style="padding-bottom:5%;">Golf as a sport is enjoyable under windy calm sunny day. These conditions are mostly available in our country which makes the game suitable to implement in our country and community.</p>
+  
+  <!-- <p>Back to </p> -->
+   <footer>
+    <p>Reach out to us through:<br>
+    <b>contacts:</b></p>
+    Email:<a href="#">guyvagolf@gmail.co.ke</a>
+    Twitter:<a href="#">@guyvagolfclub</a><br>
+    Instagram:<a href="#">guyva_Golf_Club</a><br>
+    Facebook:<a href="#">guyva_golfclub</a>
+   </footer>
+  <style>
+    body {
+      background-color:none;
+      font-family: verdana;
+    }
+    .navigation{
+      background-color:green ;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      height:20%;
+  }  
+  nav{
+    height:20%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 0;
+  }
+  img{
+    width:200px;
+    height:100px;
+  }
+  .details{
+    align-items:center;
+    justify-content: center;
+    padding-left:30%;
+
+  }
+  footer{
+    background-color:green;
+    padding-bottom:none;
+    padding-top:20px;
+  }
+  </style>
+{% endblock %}

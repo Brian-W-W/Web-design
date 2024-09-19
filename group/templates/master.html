@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+{% block content %}
+<div class="navigation">
+
+  <h1>Guyva Golf Club</h1>
+      <nav>
+        <ul>
+          {% for x in group_members %}
+            <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+          {% endfor %}
+        </ul>  </nav>
+    </div>
+    <p>Back to <a href="/group_one">Members</a></p>
+  <style>
+    body {
+      background-color:none;
+      font-family: verdana;
+    }
+    .navigation{
+      background-color:green ;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }  
+  footer{
+    background-color:green;
+    padding-bottom:none;
+    padding-top:20px;
+  }
+  </style>
+   <footer>
+    <p>Reach out to us through:<br>
+    <b>contacts:</b></p>
+    Email:<a href="#">guyvagolf@gmail.co.ke</a>
+    Twitter:<a href="#">@guyvagolfclub</a><br>
+    Instagram:<a href="#">guyva_Golf_Club</a><br>
+    Facebook:<a href="#">guyva_golfclub</a>
+   </footer
+{% endblock %}
+
+</body>
+</html>
